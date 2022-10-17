@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 				else
 				{
 					len += function(args, buffer, buf_size);
+					i += ev_print_func(format, i + 1);
 				}
 			} i++;
 		} else

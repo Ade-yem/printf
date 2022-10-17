@@ -22,11 +22,10 @@ The format tags prototype is the following:
 
 	%[flags][length]specifier
 
-	
 
 If the program runs successfully, the **return value** is the amount of chars printed.
 
-	
+
 
 | Specifier | Output |
 
@@ -202,7 +201,7 @@ Function That Concatenates The Buffer Characters.
 
 
 
-### 0-spec_funcs.c
+### print_char.c
 
 Contains:
 
@@ -214,7 +213,9 @@ Function That Writes The Character C To Stdout.
 
 ```
 
+------------
 
+### print_str.c
 
 Function That Writes The String To Stdout.
 
@@ -223,8 +224,9 @@ Function That Writes The String To Stdout.
 /* Indetifier : %s */
 
 ```
+---------------
 
-
+### print_int.c
 
 Function That Prints An Integer.
 
@@ -240,7 +242,7 @@ Function That Prints An Integer.
 
 
 
-### handle_bnr.c
+### print_bnr.c
 
 Function That Prints Decimal In Binary.
 
@@ -260,10 +262,6 @@ Function That Prints Decimal In Binary.
 
 Adejumo Adeyemi and Obakoyowa Ayobami.
 
-
-
 ------------
-
-
 
 ### End

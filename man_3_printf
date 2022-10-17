@@ -1,0 +1,66 @@
+.\" Man page for _printf.
+.TH _printf 3 "Oct 18, 2022" "1.0" "Program Manual for _printf"
+.SH NAME
+ _printf - formatted output conversion and print data.
+.SH SYNOPSIS
+.nf
+.BI printf (FORMAT, ARGUMENT)...
+.PP
+.BI "#include 'holberton.h'"
+.BI "#include <stdarg.h>"
+.BI "#include <unistd.h>"
+.PP
+.BI "int _printf(const char *format, ...);"
+.BI "int print_prg(va_list __attribute__((unused)), char *, unsigned int);"
+.BI "int handle_chr(va_list arguments, char *buf, unsigned int ibuf);"
+.BI "int handle_str(va_list arguments, char *buf, unsigned int ibuf);"
+.BI "int handle_int(va_list arguments, char *buf, unsigned int ibuf);"
+.BI "int (*get_spec_func(const char *s, int index))(va_list, char *, unsigned int);"
+.BI "int print(char *buf, unsigned int buf_size);"
+.PP
+.SH DESCRIPTION
+The output function _printf() produce output according to a format. the function _printf converts the character strings that receives as argument and prints it on the standard output.
+.SH RETURN VALUE
+Returns the number of all the characters printed, excluding the NULL byte used to end output to strings.
+.SH Format String Format
+The format string is a character string, which contains two types of directives: ordinary characters which are coppied to the output stream; and conversion specifiers. Each conversion specification is introduced by the character %, and ends with a conversion specifier.
+.SH Conversion Specifiers
+This are the characters that specifies the type of conversion to be applied. The conversion specifiers and their meanings are: 
+.TP
+.B c
+.R The \fIint\fR argument is converted to an \fIunsigned char\fR, and the resulting character is written.
+.TP
+.B s
+.R The \fIconst char *\fR argument is a pointer to an array of characters, that converts the corresponding argument to a character string.
+.TP
+.B d, i
+.R The \fIint\fR argument is converted to signed decimal notation.
+.TP
+.SH NOTES
+.R The \fB_printf()\fR is a project collaboration between \fBDiego López\fR and \fBLuis Chaparro\fR, actual students of Software Engineering at \fBHolberton School\fR.
+.SH BUGS
+.R In process
+.SH EXAMPLE
+.R To print the the string \fBHello Holberton!\fR and its length in decimal.
+
+#include ''main.h''
+
+int main(void)
+
+{
+
+	int length;
+
+	_printf(''%s'', ''Hello, Alx world!'')
+
+	_printf(''Hello world! contains %d characters'', length);
+
+	length = _printf(''Hello ALX!'');
+
+	return (0);
+
+}
+.SH SEE ALSO
+.R printf(3)
+.SH AUTHORS
+Written by \fBAdejumo Adeyemi\fR and \fBObakoyowa Ayobami\fR.

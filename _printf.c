@@ -24,11 +24,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-			{	print(buffer), free(buffer), va_end(args);
+			{	print(buffer, buf_size), free(buffer), va_end(args);
 				return (-1);
 			}
-		        else
-			{	function = get_spec_func(format);
+			else
+			{	function = get_spec_func(format, i + 1);
 				if (function == NULL)
 				{
 					if (format[i + 1] == ' ' && !format[i + 2])
@@ -40,10 +40,11 @@ int _printf(const char *format, ...)
 					len += function(args, buffer, buf_size);
 				}
 			} i++;
-		}
-		else
+		} else
 			handl_buffer(buffer, format[i], buf_size), len++;
+		for (buf_size = len; buf_size > 1024; buf_size -= 1024)
+			;
 	}
-	print(buffer), free(buffer), va_end(args);
+	print(buffer, buf_size), free(buffer), va_end(args);
 	return (len);
 }

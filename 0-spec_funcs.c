@@ -54,7 +54,7 @@ int handle_str(va_list args, char *buf, unsigned int buff_size)
 * @buff_size: index for buffer pointer
 * Return: On success 1.
  */
-/*
+
 int handle_int(va_list args, char *buf, unsigned int buff_size)
 {
 	int input;
@@ -85,4 +85,4 @@ int handle_int(va_list args, char *buf, unsigned int buff_size)
         }
         return (j + i);
 }
-*/
+

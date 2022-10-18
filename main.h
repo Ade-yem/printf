@@ -39,5 +39,8 @@ int print_oct(va_list arguments, char *buf, unsigned int ibuf);
 int print_hex(va_list arguments, char *buf, unsigned int ibuf);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
 char *fill_oct_array(char *bnr, char *oct);
+int print_add(va_list arguments, char *buf, unsigned int ibuf);
+int print_usr(va_list arguments, char *buf, unsigned int ibuf);
+
 
 #endif /* _MAIN_H_ */

@@ -20,7 +20,7 @@ int prinlunt(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = handl_buffer(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i);
 }

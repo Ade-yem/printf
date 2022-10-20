@@ -15,12 +15,12 @@ int prinpint(va_list arguments, char *buf, unsigned int ibuf)
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
-		ibuf = handl_buf(buf, '-', ibuf);
+		ibuf = handl_buffer(buf, '-', ibuf);
 	}
 	else
 	{
 		int_in = int_input;
-		ibuf = handl_buf(buf, '+', ibuf);
+		ibuf = handl_buffer(buf, '+', ibuf);
 	}
 	int_temp = int_in;
 	div = 1;
@@ -31,7 +31,7 @@ int prinpint(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = handl_buffer(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i + 1);
 }

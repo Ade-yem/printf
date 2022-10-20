@@ -41,6 +41,16 @@ char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
 char *fill_oct_array(char *bnr, char *oct);
 int print_add(va_list arguments, char *buf, unsigned int ibuf);
 int print_usr(va_list arguments, char *buf, unsigned int ibuf);
+int prinnupx(va_list arguments, char *buf, unsigned int ibuf);
+int prinnoct(va_list arguments, char *buf, unsigned int ibuf);
+int prinnhex(va_list arguments, char *buf, unsigned int ibuf);
+int prinlupx(va_list arguments, char *buf, unsigned int ibuf);
+int prinlunt(va_list arguments, char *buf, unsigned int ibuf);
+int prinloct(va_list arguments, char *buf, unsigned int ibuf);
+int prinlint(va_list arguments, char *buf, unsigned int ibuf);
+int prinlhex(va_list arguments, char *buf, unsigned int ibuf);
+
+
 
 
 #endif /* _MAIN_H_ */
